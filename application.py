@@ -14,7 +14,7 @@ def index():
     else:
         isEmoji = isEmoji.replace(" ", "")
         return render_template("index.html",
-                               emoji=emoji.emojize(f":{isEmoji}:",use_aliases=True),
+                               emoji=emoji.emojize(f":{isEmoji.lower()}:",use_aliases=True),
                                isEmoji=isEmoji)
 
 if __name__ == "__main__":
