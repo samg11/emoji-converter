@@ -3,7 +3,7 @@ import sys
 import emoji
 
 application = Flask(__name__)
-PORT = 3000
+# PORT = 3000
 
 @application.route("/")
 def index():
@@ -18,5 +18,6 @@ def index():
                                isEmoji=isEmoji)
 
 if __name__ == "__main__":
-    application.run(debug=True,port=PORT)
-    sys.stdout.write(f"Server is listening on port {PORT}\n")
+    #application.run(debug=True,port=PORT)
+    #sys.stdout.write(f"Server is listening on port {PORT}\n")
+    application.run()
